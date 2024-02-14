@@ -1,0 +1,105 @@
+# list
+cities : 
+- Mumbai
+- Delhi
+- Pune
+
+
+---
+towns: [bangalore, hyderabad]
+
+---
+
+{apple:"Fruit",age : 12}
+
+---
+Bio : | # | is used to write multiline  
+  Rihan Bagwan
+
+
+message : > 
+  THis is a message to people of India
+  that they should be alert
+
+# the above is same as 
+message1 : THis is a message to people of India that they should be alert
+
+number : 12
+Numbers : !!int 42
+BooleanValues  : No # n,N, False, FALSE , Y,y , YES ,yes 
+
+# specify the type of  variable use the exclamation and then the type of data type
+
+zero: !!int 0
+BinaryNumber: !!int 0b1010
+expoNumbers: 6.025E45
+CommaValues : !!int +547_000
+
+# floating points numbers
+
+marks: !!float 452.12
+# infinite number
+infinite : !!float .inf
+
+# not a number 
+not a num: .nan
+
+#null
+surname: !!null Null # null, Null, ~ 
+
+~: this is a null key.
+
+#date and time
+
+date : 2024-02-14
+todayDate  : !!timestamp 2024-02-14
+
+Students: !!seq
+  - name
+  - roll_no
+  
+
+students: !!seq
+  - name: John Doe
+    roll_no: 23
+    marks: 85
+  - name: Jane Smith
+    roll_no: 45
+    marks: 92
+
+student : [makrs, name, roll_no]
+
+# KEY value pairs are called maps
+# !!map
+
+
+name: Rihan
+role:
+  age: 56
+  job : student
+
+#{
+#  "role": {
+#     "age": 56, 
+#     "job": "student"
+#   }, 
+#   "name": "Rihan"
+# }
+
+#keys with more then one values  !!pairs
+
+pairs example : !!pairs
+  - job : Students
+  - job : Employee
+
+
+# similar to 
+pairs example1 : !!pairs [ job : Students, job : Employee]  # array of hashtable
+
+# set will contain only unique values   !!set
+names : !!set
+  ? komal
+  ? Apurva
+  ? Rihan 
+
+
