@@ -103,3 +103,32 @@ names : !!set
   ? Rihan 
 
 
+#dictionary !!omap
+
+people: !!omap 
+  - Rihan:
+      name: Rihan
+      age: 23
+      bgrp: o+
+#the above and below is the same thing
+people1: 
+
+  Rihan:
+      name: Rihan
+      age: 23
+      bgrp: o+
+  
+  Parshant:
+      name: Beta
+      age: 21
+      bgrp: o-  
+
+#using anchores to use the properties repetatively
+
+Likings: &likes
+ fav fruit: mango
+ dislike : Grapes
+
+person:
+  name: Rahul
+  <<: *likes
